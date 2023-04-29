@@ -1,0 +1,24 @@
+@keyframes moveLeftToRight {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: -100%;
+  }
+}
+
+.custom-text-row {
+  overflow: hidden;
+}
+
+.moving-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: moveLeftToRight 10s linear infinite;
+}
+
+.moving-text::after {
+  content: attr(data-text);
+  margin-left: 100%;
+  white-space: nowrap;
+}
